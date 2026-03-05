@@ -43,6 +43,7 @@ jobs:
       - name: Download and Prepare Wordlist
         run: |
           URLS=(
+          "https://raw.githubusercontent.com/heccdope/cdrmk3/refs/heads/main/list-word.txt"
             
           )
           
