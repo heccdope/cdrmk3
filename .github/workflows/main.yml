@@ -53,7 +53,7 @@ jobs:
 
           # Filter: Base32 (a-z, 2-7), length >= 6, unique sort
           cat raw_combined.txt | tr '[:upper:]' '[:lower:]' | tr -d '\r' | \
-          sed 's/[^a-z2-7]//g' | awk 'length($0) >= 5' | sort -u > words.txt
+          sed 's/[^a-z2-7]//g' | awk 'length($0) >= 6' | sort -u > words.txt
           
           echo "Database ready. Total patterns loaded: $(wc -l < words.txt)"
           rm raw_combined.txt
